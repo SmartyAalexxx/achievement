@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,700&display=swap');
+
+@import 'normalize';
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    height: 100%;
+    font-size: 10px;
+}
+
+body {
+    min-height: 100%;
+    font: 1.5rem/1.6 'Open Sans', sans-serif;
+    background-color: #f2f2f2;
+}
+
+.container {
+    margin: 0 auto;
+    max-width: 1140px;
+    width: 96%;
+}
+
+#header{
+    margin: 0 auto;        
+    .header__img{
+        display: inline-block;
+        height: 300px;
+    }
+}
+#wrapper{
+    background-color: #fff;
+    border-radius:10px; 
+}
+
+.page{
+    &-menu{
+        display: flex;
+        min-width: 100%;
+    }
+    &-item{
+        width: calc(1140px/6);
+        text-decoration: none;
+        padding: 15px 1%;
+        text-align: center;
+        font-size: 1.6rem;
+        color: #fff;
+        background-color: #ccd0d9;
+        
+        &-active{
+            background-color: #fff;    
+            color: #303030;
+        }
+        &:first-child{
+            border-top-left-radius: 1rem; }
+        &:last-child{
+            border-top-right-radius: 1rem; }
+        &:hover:not(.page-item-active), &:focus:not(.page-item-active){
+            background-color: #50C1E9;
+            transition: .2s ease-in;
+        }
+    }
+    &-title{
+        text-align: center;
+        font-size: 2rem;
+    }
+}
+
+.achi{
+    &-menu{
+       
+        display: inline-block;
+        padding: 5px;
+        // padding-left: 15px;
+    }
+    &-items{
+        display: inline-block;
+        padding: 10px;
+        margin: 0;
+    }
+
+    &-item{
+        padding: 7px 0 10px 0;
+        cursor: pointer;
+        list-style: none;
+        &:before{
+            content: counter(item) ". ";
+            counter-increment: item;
+        }
+        &:hover{
+            background-color: #E1EFD1;
+        }
+        &-active{
+            padding-left: 4px;
+            border-left: 4px solid green;
+            background-color: #E1EFD1;
+
+        }
+    }
+    &-block{
+        text-align: center;
+    }
+    //section's body
+    &-section{
+        outline: 1px solid #50C1E9;
+        
+    }
+    &-title{
+        display: block;
+        font-size: 2rem;
+        font-weight: 300;
+    }
+    &-stats{
+        display: inline-block;
+        outline: 2px solid navy;
+        width: 33%;
+        height: 300px;
+        & b{
+            cursor: help;
+        }
+    }
+    &-armor{
+        display: inline-block;
+        outline: 2px solid peru;
+        width: 33%;
+        height: 300px;
+        font-style: italic;
+        .armor-current{
+            display: block;
+            height: 64px;
+            width: 64px;
+            margin: 0 auto;
+        }
+    }
+}
