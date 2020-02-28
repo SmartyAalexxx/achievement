@@ -66,7 +66,6 @@ body {
 .achi-menu {
   display: inline-block;
   padding: 5px;
-  outline: 1px solid red;
   -webkit-box-flex: 1;
   -ms-flex: 1 2 100%;
   flex: 1 2 100%; }
@@ -100,10 +99,9 @@ body {
 
 .achi-content {
   outline: 1px solid #50C1E9;
-  display: none;
   width: 100%; }
   .achi-content-active {
-    padding: 50px 10px 5px;
+    padding: 50px 10px 25px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -111,7 +109,6 @@ body {
     justify-content: space-around; }
 
 .achi-title {
-  position: absolute;
   left: 0;
   top: 0;
   margin: 10px 0;
@@ -125,7 +122,6 @@ body {
 
 .achi-stats {
   display: inline-block;
-  outline: 2px solid navy;
   width: 50%;
   min-width: 300px;
   height: 300px;
@@ -142,7 +138,6 @@ body {
   min-width: 300px;
   padding: 10px;
   display: inline-block;
-  outline: 2px solid peru;
   height: 300px;
   font-style: italic; }
   .achi-equips .armor-current {
@@ -158,3 +153,8 @@ body {
 .achi-equip {
   display: block;
   width: 100%; }
+
+.achi-info {
+  display: none; }
+  .achi-info-active {
+    display: inline-block; }
